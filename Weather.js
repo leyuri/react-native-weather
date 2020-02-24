@@ -10,7 +10,7 @@ const weatherOptions = {
         iconName: "weather-fog",
         gradient: ["#3E5151", "#decba4"],
         title: "Haze",
-        subtitle: "Just don't go outside."
+        subtitle: "Be careful driving 🚙"
     },
     Thunderstorm: {
         iconName: "weather-lightning",
@@ -27,14 +27,14 @@ const weatherOptions = {
       Rain: {
         iconName: "weather-rainy",
         gradient: ["#00C6FB", "#005BEA"],
-        title: "Raining like a MF",
-        subtitle: "For more info look outside"
+        title: "Raining",
+        subtitle: "Take your umbrella ☔"
       },
       Snow: {
         iconName: "weather-snowy",
         gradient: ["#7DE2FC", "#B9B6E5"],
         title: "Cold as balls",
-        subtitle: "Do you want to build a snowman? Fuck no."
+        subtitle: "Do you want to build a snowman? ⛄"
       },
       Atmosphere: {
         iconName: "weather-hail",
@@ -43,8 +43,8 @@ const weatherOptions = {
       Clear: {
         iconName: "weather-sunny",
         gradient: ["#FF7300", "#FEF253"],
-        title: "Sunny as fuck",
-        subtitle: "Go get your ass burnt"
+        title: "Sunny",
+        subtitle: "Go get your ass burnt 🍹"
       },
       Clouds: {
         iconName: "weather-cloudy",
@@ -62,7 +62,7 @@ const weatherOptions = {
         iconName: "weather-hail",
         gradient: ["#4DA0B0", "#D39D38"],
         title: "Dusty",
-        subtitle: "Thanks a lot China 🖕🏻"
+        subtitle: "If you don't wear a mask, you'll die 😷"
       }
 };
 
@@ -72,7 +72,6 @@ export default function Weather({ temp, condition }) {
         <LinearGradient
           colors={weatherOptions[condition].gradient}
           style={styles.container}>
-
             <StatusBar barStyle="light-content"/>
             <View style={styles.halfcontainer}>
                 <MaterialCommunityIcons 
