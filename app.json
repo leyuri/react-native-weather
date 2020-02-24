@@ -26,6 +26,7 @@
     "ios": {
       "supportsTablet": true
     },
-    "description": ""
+    "description": "Weather app is using by react native",
+    "githubUrl": "https://github.com/leyuri"
   }
 }
