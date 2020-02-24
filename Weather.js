@@ -8,7 +8,9 @@ import { LinearGradient } from 'expo-linear-gradient';
 const weatherOptions = {
     Haze: {
         iconName: "weather-fog",
-        gradient: ["#3E5151", "#decba4"]
+        gradient: ["#3E5151", "#decba4"],
+        title: "Haze",
+        subtitle: "Just don't go outside."
     },
     Thunderstorm: {
         iconName: "weather-lightning",
@@ -63,7 +65,10 @@ export default function Weather({ temp, condition }) {
                 color="white"/>
                 <Text style={styles.temp}>{temp}°</Text>
             </View>
-            <View style={styles.halfcontainer}/>
+            <View style={{...styles.halfcontainer, ...styles.textContainer}}>
+                <Text style={styles.title}>{weatherOptions[condition].title}</Text>
+                <Text style={styles.subtitle}>{weatherOptions[condition].subtitle}</Text>
+            </View>
             </LinearGradient>
         // </View>
     );
@@ -99,6 +104,22 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center"
+    },
+    title: {
+        color: "white",
+        fontSize: 45,
+        fontWeight: "300",
+        marginBottom: 10
+
+    },
+    subtitle: {
+        color: "white",
+        fontWeight: "600",
+        fontSize: 25
+    },
+    textContainer: {
+        paddingHorizontal: 20,
+        alignItems: "flex-start"
     }
 });
 
