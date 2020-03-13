@@ -4,7 +4,7 @@
 - React Native, expo
 - weather api (https://openweathermap.org/api)
 
-### Implementation
+### Features
 - weather view
 
 ### Screenshots
